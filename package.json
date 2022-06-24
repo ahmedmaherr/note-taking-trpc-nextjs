@@ -1,12 +1,14 @@
 {
   "name": "note-taking",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "postinstall": "prisma generate",
+    "lint": "tsc --noEmit --incremental && next lint",
+    "pre-commit": "tsc --noEmit --incremental && lint-staged"
   },
   "dependencies": {
     "next": "12.1.6",
