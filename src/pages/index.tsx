@@ -1,10 +1,8 @@
 import type { NextPage } from 'next';
-import Head from 'next/head';
-import Image from 'next/image';
 
 const Home: NextPage = () => {
   return (
-    <div>
+    <div className="bg-red-400">
       <h1>HEY!</h1>
     </div>
   );
